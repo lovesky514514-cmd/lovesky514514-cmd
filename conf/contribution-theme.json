@@ -1,0 +1,20 @@
+[
+  {
+    "type": "normal",
+    "fileName": "sukoya-3d.svg",
+    "backgroundColor": "#FFF8FC",
+    "foregroundColor": "#785E80",
+    "strongColor": "#54B7D6",
+    "weakColor": "#E4BCD4",
+    "radarColor": "#F1B4D0",
+    "growingAnimation": true,
+    "contribColors": [
+      "#F5ECF4",
+      "#E5F7FF",
+      "#B1E9F8",
+      "#AFAAF0",
+      "#EF9CCB"
+    ],
+    "duration": "10s"
+  }
+]
