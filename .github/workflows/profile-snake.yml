@@ -1,0 +1,32 @@
+name: Profile Contribution Snake
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "43 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-contribution-snake
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create snake SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/sukoya-snake.svg?color_snake=#59D5FF&color_dots=#FFF8FC,#F5D9E7,#D3EFFF,#A9DCEB,#DF8FBE
+            dist/sukoya-snake-dark.svg?color_snake=#59D5FF&color_dots=#19273C,#35425B,#475578,#7470A7,#CF8EB8
+      - name: Publish snake SVGs
+        uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
