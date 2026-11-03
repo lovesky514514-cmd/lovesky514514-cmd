@@ -6,7 +6,7 @@
 
 <img src="./assets/divider.svg" alt="" width="900" />
 
-### ♡ My Contributions (3D)
+### ♡ My Contributions
 
 <img src="https://raw.githubusercontent.com/lovesky514514-cmd/lovesky514514-cmd/output-3d/sukoya-3d.svg" alt="SuKoYa GitHub 3D contributions" width="950" />
 
